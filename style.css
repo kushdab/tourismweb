@@ -9,6 +9,12 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
+    scroll-behavior: smooth; /* Enables smooth scrolling globally */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Hero Section */
@@ -109,6 +115,46 @@ h2::after {
     background: linear-gradient(145deg, #ff8a80, #ffeb3b);
 }
 
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #f50057;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#menu-toggle {
+    background-color: #f50057;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#menu-links a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #f50057;
+}
+
 /* Footer */
 footer {
     background: #333;
@@ -145,5 +191,13 @@ footer p {
 
     header p {
         font-size: 1.1rem;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
     }
 }
