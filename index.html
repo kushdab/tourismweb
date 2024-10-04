@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Travels - Explore the World</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section with Background Image */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #f9a825;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #f50057;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: #f9a825;
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+        }
+
+        .services, .packages, .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .services div, .packages div, .testimonials div {
+            padding: 20px;
+            background: linear-gradient(145deg, #f06292, #f9a825);
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .services div:hover, .packages div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(145deg, #ff8a80, #ffeb3b);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #f9a825;
+            text-decoration: none;
+        }
+
+        footer .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        /* Responsive design */
+        @media(max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <h1>Wanderlust Travels</h1>
+        <p>Discover your next adventure with us.</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Wanderlust Travels, we help you explore the most beautiful destinations around the world. Our expert team curates exclusive tours that make your travels memorable and hassle-free.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div>
+                <h3>Adventure Tours</h3>
+                <p>Experience thrilling adventures, from mountain treks to desert safaris.</p>
+            </div>
+            <div>
+                <h3>Luxury Resorts</h3>
+                <p>Stay in world-class resorts with all the comfort and amenities you need.</p>
+            </div>
+            <div>
+                <h3>Cultural Experiences</h3>
+                <p>Immerse yourself in rich cultural experiences, exploring history and traditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages">
+        <h2>Exclusive Tour Packages</h2>
+        <div class="packages">
+            <div>
+                <h3>European Delights</h3>
+                <p>Explore the beautiful landscapes of Europe with our 10-day tour package.</p>
+            </div>
+            <div>
+                <h3>Tropical Paradise</h3>
+                <p>Relax on pristine beaches in the Maldives and enjoy island life.</p>
+            </div>
+            <div>
+                <h3>Asian Wonders</h3>
+                <p>Visit the ancient temples, bustling cities, and serene countryside of Asia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+            <div>
+                <p>"The best trip of my life! Everything was organized to perfection."</p>
+                <h4>- Sarah, USA</h4>
+            </div>
+            <div>
+                <p>"We loved every minute of our adventure with Wanderlust Travels. Highly recommended!"</p>
+                <h4>- Rahul, India</h4>
+            </div>
+            <div>
+                <p>"Unforgettable experience! The team was professional and friendly."</p>
+                <h4>- Maria, Brazil</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@wanderlusttravels.com | Phone: +123 456 7890</p>
+        <div class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2024 Wanderlust Travels. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
