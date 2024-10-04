@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Reset default styles */
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -7,55 +7,26 @@ body, h1, h2, h3, p {
 /* Body styles */
 body {
     font-family: 'Arial', sans-serif;
-    color: #ffffff;
-    line-height: 1.6;
+    color: #fff;
 }
 
 /* Header styles */
 header {
     position: relative;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
 }
 
 header h1 {
     font-size: 3.5rem;
     margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 header p {
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-/* Navigation styles */
-nav {
-    margin: 20px 0;
-}
-
-.nav-links {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the links */
-}
-
-.nav-links li {
-    margin: 0 15px; /* Spacing between links */
-}
-
-nav a {
-    text-decoration: none;
-    color: #f9a825; /* Link color */
-    padding: 10px 15px; /* Padding around the links */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s; /* Transition effects */
-}
-
-nav a:hover {
-    background-color: rgba(249, 168, 37, 0.8);
-    color: #fff; /* Change text color on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Image Container */
@@ -66,20 +37,53 @@ nav a:hover {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: -1; /* Ensure the image stays behind other elements */
+    z-index: -1; /* Keep the background behind everything */
 }
 
 .background-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
+    object-fit: cover; /* Cover the entire container */
 }
 
-/* Section styles */
-section {
-    padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+/* Navigation styles */
+nav {
     margin: 20px 0;
+}
+
+.nav-links {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center links */
+}
+
+.nav-links li {
+    margin: 0 20px; /* Space between links */
+}
+
+nav a {
+    text-decoration: none;
+    color: #f9a825; /* Link color */
+    padding: 10px 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+}
+
+nav a:hover {
+    background-color: rgba(249, 168, 37, 0.8);
+    color: #fff; /* Change text color on hover */
+}
+
+/* Main section styles */
+main {
+    padding: 40px 20px;
+}
+
+section {
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.7); /* Darker background for readability */
+    padding: 40px;
     border-radius: 8px;
 }
 
@@ -89,18 +93,19 @@ section h2 {
     color: #f9a825; /* Heading color */
 }
 
-.services, .packages, .testimonials {
+.service-items, .package-items, .testimonial-items {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-around; /* Space out items evenly */
+    flex-wrap: wrap; /* Wrap items to next line if needed */
 }
 
-.services > div, .packages > div, .testimonials > div {
-    background: rgba(255, 255, 255, 0.2);
+.service-item, .package-item, .testimonial-item {
+    background: rgba(255, 255, 255, 0.2); /* Slightly lighter background for items */
     padding: 20px;
     margin: 10px;
-    border-radius: 8px;
-    flex: 1 1 30%; /* Responsive width */
+    border-radius: 8px; /* Rounded corners */
+    flex: 1 1 30%; /* Responsive item width */
+    text-align: center; /* Center text */
 }
 
 /* Footer styles */
@@ -124,14 +129,14 @@ footer a:hover {
 .footer-nav {
     display: flex;
     justify-content: center; /* Center the footer links */
-    gap: 40px; /* Spacing between links */
+    gap: 40px; /* Space between links */
     padding: 20px 0; /* Padding for top and bottom */
 }
 
 .social-icons {
     display: flex;
-    justify-content: center; /* Center the social icons */
-    gap: 15px; /* Spacing between icons */
+    justify-content: center; /* Center social icons */
+    gap: 15px; /* Space between icons */
     padding: 20px 0; /* Padding for top and bottom */
 }
 
@@ -147,23 +152,8 @@ footer a:hover {
     border-radius: 50%; /* Rounded icons */
 }
 
-/* Back to Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #f50057; /* Button color */
-    color: white; /* Text color */
-    padding: 10px; /* Padding */
-    border-radius: 50%; /* Round button */
-    font-size: 1.5rem; /* Button size */
-    display: none; /* Hidden initially */
-    cursor: pointer; /* Pointer cursor */
-    z-index: 1000; /* High z-index to ensure visibility */
-}
-
 /* Responsive Design */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     header h1 {
         font-size: 2.5rem; /* Smaller heading */
     }
@@ -172,15 +162,7 @@ footer a:hover {
         font-size: 1.1rem; /* Smaller paragraph */
     }
 
-    nav {
-        display: none; /* Hide desktop navigation in mobile view */
-    }
-
-    #mobile-menu {
-        display: block; /* Display mobile menu */
-    }
-
-    .services > div, .packages > div, .testimonials > div {
+    .service-item, .package-item, .testimonial-item {
         flex: 1 1 100%; /* Full width on small screens */
     }
 }
